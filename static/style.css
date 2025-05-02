@@ -1,0 +1,119 @@
+
+/* static/style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh; /* Center vertically */
+}
+
+#chat-container {
+    width: 95%;
+    max-width: 600px;
+    height: 80vh; /* Increased height slightly */
+    min-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures rounded corners work */
+}
+
+#chat-header {
+    background-color: #ff6b6b; /* A warm, inviting color */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ff4f4f;
+}
+
+#chat-box {
+    flex-grow: 1; /* Takes up available space */
+    padding: 15px;
+    overflow-y: auto; /* Makes the message area scrollable */
+    display: flex; /* Use flex for messages */
+    flex-direction: column; /* Stack messages vertically */
+    gap: 10px; /* Space between messages */
+}
+
+/* Styling for individual messages */
+.message {
+    display: flex; /* Allows aligning left/right */
+    max-width: 80%; /* Messages don't take full width */
+}
+
+.user-message {
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot-message {
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 18px; /* Pill shape */
+    max-width: 100%; /* Ensure bubble respects parent max-width */
+    word-wrap: break-word; /* Break long words */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Preserve line breaks from '\n' */
+}
+
+.user-message .message-bubble {
+    background-color: #dcf8c6; /* Light green for user */
+    color: #333;
+    border-bottom-right-radius: 2px; /* Tail effect */
+}
+
+.bot-message .message-bubble {
+    background-color: #e9e9eb; /* Light grey for bot */
+    color: #333;
+    border-bottom-left-radius: 2px; /* Tail effect */
+}
+
+
+#chat-input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex-grow: 1; /* Input takes up most of the space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 1em;
+    outline: none; /* Remove default outline on focus */
+}
+
+#user-input:focus {
+    border-color: #ff6b6b; /* Highlight on focus */
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+#send-button:hover {
+    background-color: #ff4f4f;
+}
+
+#send-button:active {
+    background-color: #ff3a3a;
+}

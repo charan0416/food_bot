@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Food Bot</title>
+    <!-- Flask serves static files from the 'static' folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="chat-container">
+        <div id="chat-header">
+            <h2>Food Ordering Bot 🍔🍕</h2>
+        </div>
+        <div id="chat-box">
+            <!-- Messages will appear here dynamically added by JavaScript -->
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="user-input" placeholder="Type your order or question...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <!-- Flask serves static files from the 'static' folder -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
